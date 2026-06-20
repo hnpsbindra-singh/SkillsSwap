@@ -413,7 +413,7 @@ export default function Auth() {
                   className="input-field"
                   style={{ ...inputStyle, paddingRight: '2.75rem' }}
                   type={showPassword ? 'text' : 'password'}
-                  placeholder={tab === 'forgot' ? 'New Password' : 'Password'}
+                  placeholder={tab === 'forgot' ? 'New Password(Minimum 8 digits)' : 'Password)(Minimum 8 digits)'}
                   value={
                     tab === 'login' ? loginForm.password :
                     tab === 'register' ? registerForm.password :
