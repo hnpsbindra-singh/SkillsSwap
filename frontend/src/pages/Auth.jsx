@@ -381,7 +381,7 @@ export default function Auth() {
                 <input
                   className="input-field"
                   style={inputStyle}
-                  placeholder="Username"
+                  placeholder="Username(user@example.com)"
                   value={tab === 'login' ? loginForm.username : tab === 'register' ? registerForm.username : forgotForm.username}
                   onChange={(e) => {
                     const val = e.target.value;
