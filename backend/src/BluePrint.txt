@@ -1,0 +1,37 @@
+AUTH MODULE[DONE]
+POST /auth/register [DONE]               → Create a new user account and return recovery code.
+POST /auth/login   [DONE]                → Authenticate user and return JWT token.
+POST /auth/forgot-password   [DONE]      → Reset password using recovery code.
+
+PROFILE MODULE [DONE]
+GET  /profile/me   [DONE]                → Get logged-in user's profile.
+PUT  /profile          [DONE]            → Update profile details.
+GET  /profile/{userId}   [DONE]          → View another user's profile.
+
+SKILL BARTER POST MODULE [DONE]
+POST /posts       [DONE]                 → Create a barter post (teach X, learn Y).
+GET  /posts           [DONE]             → View all barter posts.
+GET  /posts/{postId}  [DONE]             → View a specific barter post.
+GET  /posts/me     [DONE]                → View posts created by current user.
+DELETE /posts/{postId}   [DONE]          → Delete own barter post.
+
+REQUEST MODULE
+POST /posts/{postId}/request [DONE]      → Send barter request to post owner.
+GET  /requests/sent   [DONE]             → View requests sent by current user.
+GET  /requests/received     [DONE]       → View requests received by current user.
+PUT  /requests/{requestId}/accept[DONE]  → Accept a barter request.
+PUT  /requests/{requestId}/reject[DONE]  → Reject a barter request.
+
+CHAT MODULE
+GET  /chats                    [DONE]    → View all active chats.
+GET  /chats/{roomKey}/messages   [DONE]    → View chat history.
+WS   /ws               [DONE]            → Establish WebSocket connection.
+SEND /app/chat/send                → Send a real-time message.
+SUB  /topic/chat/{roomKey}          → Receive messages for a chat.
+
+SEARCH MODULE
+GET  /search/posts?skill=React [DONE]    → Search barter posts by skill.
+
+
+DASHBOARD MODULE [ADMIN]
+GET  /dashboard                    → View profile stats, active requests.
